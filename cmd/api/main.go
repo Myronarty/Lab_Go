@@ -23,3 +23,10 @@ func main() {
 	server := server.NewServer(store)
 	server.Run(":3000")
 }
+
+type Kogut struct {
+	age    int
+	name   string
+	course int
+	sex    bool
+}
