@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"os"
 
+	db "github.com/Myronarty/Lab_Go/db/sqlc"
+	"github.com/Myronarty/Lab_Go/internal/server"
 	"github.com/jackc/pgx/v5/pgxpool"
-	db "github.com/nochzato/example/db/sqlc"
-	"github.com/nochzato/example/internal/server"
 )
 
 func main() {
@@ -22,11 +22,4 @@ func main() {
 
 	server := server.NewServer(store)
 	server.Run(":3000")
-}
-
-type Kogut struct {
-	age    int
-	name   string
-	course int
-	sex    bool
 }
